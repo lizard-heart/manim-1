@@ -17,5 +17,3 @@ class SquareToCircle(Scene):
 class FakeScene(Scene):
     def construct(self):
         ...
-        # do nothing
-        # test

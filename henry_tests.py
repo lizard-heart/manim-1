@@ -7,6 +7,7 @@ class Integral(GraphScene):
 
     def construct(self):
         self.show_function_graph()
+        self.show_text()
 
     def show_function_graph(self):
         self.setup_axes(animate=True)
@@ -36,6 +37,11 @@ class Integral(GraphScene):
         for j in range(1, 6):
             self.transform_between_riemann_rects(
                 self.rect_list[j-1], self.rect_list[j], dx=1, replace_mobject_with_target_in_scene=True, run_time=2)
+
+    def show_text(self):
+        hel = TextMobject("Hello").set_color(PINK).scale(1.1)
+        hel.move_to(UP)
+        self.play(Write(hel))
 
 
 class SquareToCircle(Scene):

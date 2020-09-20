@@ -39,9 +39,9 @@ class Integral(GraphScene):
                 self.rect_list[j-1], self.rect_list[j], dx=1, replace_mobject_with_target_in_scene=True, run_time=2)
 
     def show_text(self):
-        hel = TextMobject("Hello").set_color(PINK).scale(1.1)
-        hel.move_to(UP)
-        self.play(Write(hel))
+        text = TextMobject("Hello").set_color(PINK).scale(1.1)
+        text.move_to(UP)
+        self.play(Write(text))
 
 
 class SquareToCircle(Scene):

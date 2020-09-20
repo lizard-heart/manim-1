@@ -21,7 +21,7 @@ class Integral(GraphScene):
             "x_min": 2,
             "x_max": 8,
             "fill_opacity": 0.9,
-            "stroke_width": 0.2
+            "stroke_width": 4.0
         }
         self.graph = graph
         iterations = 6

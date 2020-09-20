@@ -23,7 +23,7 @@ class Integral(GraphScene):
             "fill_opacity": 0.9,
             "stroke_width": 0.2
         }
-        # self.graph = graph
+        self.graph = graph
         iterations = 6
         self.rect_list = self.get_riemann_rectangles_list(
             graph, iterations, start_color=PURPLE, end_color=ORANGE, **kwargs)
@@ -33,7 +33,7 @@ class Integral(GraphScene):
         self.transform_between_riemann_rects(
             flat_rects, rects, replace_mobject_with_target_in_scene=True, run_time=2)
 
-        for j in range(1, 5):
+        for j in range(1, 6):
             self.transform_between_riemann_rects(
                 self.rect_list[j-1], self.rect_list[j], dx=1, replace_mobject_with_target_in_scene=True, run_time=2)
 

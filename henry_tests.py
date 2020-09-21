@@ -8,6 +8,7 @@ class Integral(GraphScene):
     def construct(self):
         self.show_function_graph()
         self.show_text()
+        self.wait()
 
     def show_function_graph(self):
         self.setup_axes(animate=True)
@@ -34,13 +35,16 @@ class Integral(GraphScene):
         self.transform_between_riemann_rects(
             flat_rects, rects, replace_mobject_with_target_in_scene=True, run_time=2)
 
-        for j in range(1, 6):
+        for j in range(1, 3):
             self.transform_between_riemann_rects(
                 self.rect_list[j-1], self.rect_list[j], dx=1, replace_mobject_with_target_in_scene=True, run_time=2)
 
     def show_text(self):
+        rect = Rectangle()
+        rect.move_to(UP)
+        self.play(ShowCreation(rect))
         text = TextMobject("Hello").set_color(PINK).scale(1.1)
-        text.move_to(UP)
+        text.move_to(rect)
         self.play(Write(text))
 
 
